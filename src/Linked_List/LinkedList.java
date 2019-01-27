@@ -63,21 +63,21 @@ public class LinkedList<E> {
         return false;
     }
 
-    public Node get(int index) {
+    public E get(int index) {
         if (index < 0 || index >= size)
             throw new IllegalArgumentException("illegal index: " + index);
         Node cur = dummyHead.next;
         for (int i = 0; i < index; i++) {
             cur = cur.next;
         }
-        return cur;
+        return cur.e;
     }
 
-    public Node getFirst() {
+    public E getFirst() {
         return get(0);
     }
 
-    public Node getLast() {
+    public E getLast() {
         return get(size - 1);
     }
 
