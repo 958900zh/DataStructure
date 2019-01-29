@@ -42,8 +42,9 @@ public class ArrayStack<E> implements Stack<E> {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Stack top: ");
+        sb.append("Stack: ");
         sb.append(array);
+        sb.append(" <= top");
         return sb.toString();
     }
 }

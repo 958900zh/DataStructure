@@ -127,6 +127,19 @@ public class LinkedList<E> {
         return size == 0;
     }
 
+    public Node re(Node head) {
+        if (head == null)
+            return head;
+        Node cur = head;
+        while(cur.next != null) {
+            Node next = cur.next;
+            cur.next = next.next;
+            next.next = head;
+            head = next;
+        }
+        return head;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("[");
